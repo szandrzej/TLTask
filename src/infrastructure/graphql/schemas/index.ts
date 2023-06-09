@@ -1,6 +1,7 @@
 import { GraphQLObjectType, GraphQLSchema, GraphQLString } from 'graphql';
 import { loginSchema } from './loginSchema';
-import { usersSchema } from '@/infrastructure/graphql/schemas/usersSchema';
+import { usersSchema } from './usersSchema';
+import { createUserSchema } from './createUserSchema';
 
 export const schema = new GraphQLSchema({
   query: new GraphQLObjectType({
@@ -17,6 +18,7 @@ export const schema = new GraphQLSchema({
     name: 'Mutation',
     fields: {
       ...loginSchema,
+      ...createUserSchema,
     },
   }),
 });

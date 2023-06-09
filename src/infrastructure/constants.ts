@@ -1,4 +1,5 @@
 export const BAD_CREDENTIALS = 'BAD_CREDENTIALS';
+export const BAD_REQUEST = 'BAD_REQUEST';
 export const AUT_ERROR = 'AUTH_ERROR';
 export const JWT_EXPIRED = 'JWT_EXPIRED';
 export const GQL_ERROR_CODES: Record<string, number> = {
