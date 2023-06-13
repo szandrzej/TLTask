@@ -9,6 +9,7 @@ import {
 import Cookies from 'js-cookie';
 import { TOKEN_COOKIE_NAME } from '@/lib/auth';
 import { useRouter } from 'next/router';
+import { LoginForm } from '@/components/LoginForm';
 
 // @NOTE: handle errors better
 
@@ -35,29 +36,7 @@ export default function LoginPage() {
   return (
     <div className={styles.container}>
       <Card title="Login" className={styles.loginCard}>
-        <Form name="login" onFinish={handleFinish} autoComplete="off">
-          <Form.Item
-            label="Email"
-            name="email"
-            rules={[{ required: true, message: 'Please input your email!' }]}
-          >
-            <Input />
-          </Form.Item>
-
-          <Form.Item
-            label="Password"
-            name="password"
-            rules={[{ required: true, message: 'Please input your password!' }]}
-          >
-            <Input.Password />
-          </Form.Item>
-
-          <Form.Item>
-            <Button type="primary" htmlType="submit" block loading={false}>
-              Submit
-            </Button>
-          </Form.Item>
-        </Form>
+        <LoginForm handleFinish={handleFinish} />
       </Card>
     </div>
   );

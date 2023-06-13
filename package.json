@@ -9,7 +9,8 @@
     "check-types": "tsc --noemit",
     "lint": "next lint && npm run check-types",
     "lint:fix": "next lint --fix",
-    "db:init": "sequelize-cli db:migrate && sequelize-cli db:seed:all"
+    "db:init": "sequelize-cli db:migrate && sequelize-cli db:seed:all",
+    "test": "jest"
   },
   "dependencies": {
     "@ant-design/icons": "5.1.4",
